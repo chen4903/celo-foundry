@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.6.12;
+pragma solidity ^0.6.12 <0.8.20;
 
 pragma experimental ABIEncoderV2;
 
-import "forge-std-8/Vm.sol";
-import "forge-std-8/console2.sol";
+import "forge-std/Vm.sol";
+import "forge-std/console2.sol";
 import "./Precompiles.sol";
 
 contract PrecompileHandler is Precompiles {

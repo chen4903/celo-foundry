@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.6.12;
+pragma solidity ^0.6.12 <0.8.20;
 
 pragma experimental ABIEncoderV2;
  
-
 contract UsingPrecompiles  {
 
     address constant _TRANSFER = address(0xff - 2);
