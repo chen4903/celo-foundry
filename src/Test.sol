@@ -42,37 +42,6 @@ contract Test is ForgeTest, Precompiles {
     return (addr, pk);
   }
 
-  /* Extra assertions, extends forge-std/Test.sol */
-
-  function assertEq(address[] memory a, address[] memory b) internal virtual override {
-    if (keccak256(abi.encode(a)) != keccak256(abi.encode(b))) {
-      emit log("Error: a == b not satisfied [address[]]");
-      emit log_named_array("  Expected", b);
-      emit log_named_array("    Actual", a);
-      fail();
-    }
-  }
-
-  function assertEq(
-    address[] memory a,
-    address[] memory b,
-    string memory err
-  ) internal virtual override {
-    if (keccak256(abi.encode(a)) != keccak256(abi.encode(b))) {
-      emit log_named_string("Error", err);
-      assertEq(a, b);
-    }
-  }
-
-  function assertEq(bytes32[] memory a, bytes32[] memory b) internal {
-    if (keccak256(abi.encode(a)) != keccak256(abi.encode(b))) {
-      emit log("Error: a == b not satisfied [bytes32[]]");
-      emit log_named_array("  Expected", b);
-      emit log_named_array("    Actual", a);
-      fail();
-    }
-  }
-
   function deployCodeTo(string memory what, address where) internal virtual override {
     deployCodeTo(what, "", 0, where);
   }
