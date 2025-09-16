@@ -1,5 +1,7 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity >=0.5.13 <0.8.20;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.12;
+
+pragma experimental ABIEncoderV2;
 
 import { Test as ForgeTest } from "forge-std-8/Test.sol";
 import "./Precompiles.sol";

@@ -1,4 +1,7 @@
-pragma solidity >=0.5.13 <0.8.20;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.12;
+
+pragma experimental ABIEncoderV2;
  
 
 contract UsingPrecompiles  {
